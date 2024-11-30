@@ -22,7 +22,7 @@ El propósito de este proyecto es asociar la teoría (codificación en binario B
 
 [_> visualizador](codigos/visualizador_digital.ino)
 
-## Segundo Proyecto Requerido para el TP (Visualizador Digital)
+## Segundo Proyecto Requerido para el TP (Sistema Para Un Garaje)
 
 ### Esquema del Circuito
 
