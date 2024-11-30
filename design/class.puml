@@ -1,0 +1,48 @@
+@startuml Class
+!theme _none_
+class VisualizadorDigital {
+    -Configuracion entrada_1
+    -Configuracion entrada_2
+    -Configuracion entrada_3
+    -Configuracion entrada_4
+    -Configuracion transistor_1
+    -Configuracion transistor_2
+    -Configuracion transistor_3
+    -void decimalToBDC()
+    -void separarDigitos()
+    -void enviar()
+    +VisualizadorDigital(List<Configuracion> pin)
+    +void escribirNumero(int decimal)
+    +void setup()
+}
+
+class Potenciometro {
+    -Configuracion arduino
+    +Potenciometro(int pin)
+    +int leer()
+}
+
+class ServoMotor {
+    -Configuracion arduino
+    -Servo servo
+    +ServoMotor(int pin)
+    +void girar(int pin)
+    +void setup()
+}
+
+class Configuracion {
+    -int pin
+    +Configuracion(int pin)
+    +void entrada()
+    +void salida()
+    +int getPin()
+}
+
+class MapeoUtil {
+    +void AnalogicoToGrados(int valor, int rangoMinEntrada, int rangoMaxEntrada, int rangoMinSalida, int rangoMaxSalida)
+}
+
+VisualizadorDigital ..> Configuracion
+Potenciometro ..> Configuracion
+ServoMotor ..> Configuracion
+@enduml
